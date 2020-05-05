@@ -5,13 +5,20 @@ When the user enters '0', execution should stop.
 */
 
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
-int main()
-{
-    int value;
-    cout << "Please enter a value: " << abs(-10) << endl; //absolute function to make all value positive
-    cin >> value;
-    cout << "Your value squared is: " << pow(value, 2) << endl;
+int main(){
+    int user_input = 0;
+    while (user_input > 0){
+        cout << "Please enter a positive value: " << endl;
+        cin >> user_input;
+        cout << user_input << "squared is " << pow (user_input, 2) << endl;
+            if (user_input == 0){
+                break;
+                cout << "Execution stopped because you entered 0." << endl;
+                }
+        }
     return 0;
-}
+};
