@@ -11,21 +11,29 @@ The year is also evenly divisible by 400, then it is a leap year.
 */
 
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
-int main()
-{
-    int year;
-    cout >> "Please enter a year: " << endl;
-    cin << year; //get value from user
-    if (year % 4 && year % 100) //divisible by 4 and divisible by 100 is not a leap year
-    {
-        cout << "It is not a leap year." << endl;
-        if (year % 4 || year % 400) //divisble by 4 and divisible by 400 is a leap year
-        {
-            cout << "It is a leap year." << endl;
+int main(){
+    int user_input = 0;
+
+    while (1){
+        cout << "Please enter a year: " << endl;
+        cin >> user_input;
+        if (user_input == 0){
+            break;
         }
+    
+    cout << (user_input % 4 == 0) << endl;
+    cout << (user_input % 100 == 0) << endl;
+    cout << (user_input % 400 == 0) << endl;
+     
+    if (user_input % 4 == 0){
+        cout << "This is a leap year." << endl;
+    } else if (user_input % 100 == 0){
+
     }
     return 0;
+    }
 }
-
